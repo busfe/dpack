@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+program
+  .usage('<command> [options]')
+  .option('-v --version', 'output the version number', version)
+  .option('-w --watch', 'watch the file change')
+  .option('-b --build', 'build the project')
+
+function version() {
+	console.log(require('../package.json').version)
+}
+
+program.command('watch')
+	.alias('w')
+	.description('watch file change')
+	.action(() => {
+		console.log('watch')
+	})
+
+program.command('build')
+	.alias('b')
+	.description('build the project')
+	.action(() => {
+		console.log('build')
+	})
+
+program.command('server')
+	.alias('s')
+	.description('start server')
+	.action(() => {
+		console.log('server')
+	})	
+program.parse(process.argv);
