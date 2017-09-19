@@ -6,8 +6,8 @@ program
   .usage('<command> [options]')
   .option('-v --version', 'output the version number', version)
   .option('-w --watch', 'watch the file change')
-  .option('-b --build', 'build the project')
   .option('-s --server', 'start webpack dev server')
+  .option('-o --optimize', 'optimize css or js files')
   .option('-p --port', 'server port', parseInt)
 
 function version() {
