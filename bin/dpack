@@ -8,6 +8,7 @@ program
   .option('-w --watch', 'watch the file change')
   .option('-b --build', 'build the project')
   .option('-s --server', 'start webpack dev server')
+  .option('-p --port', 'server port', parseInt)
 
 function version() {
 	console.log(require('../package.json').version)
