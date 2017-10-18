@@ -8,6 +8,7 @@ program
   .option('-w --watch', 'watch the file change')
   .option('-s --server', 'start webpack dev server')
   .option('-o --optimize', 'optimize css or js files')
+  .options('-d --dist', 'output path')
   .option('-p --port', 'server port', parseInt)
 
 function version() {
@@ -20,5 +21,10 @@ program.command('build')
 	.action(() => {
 		require('../lib/build')(program)
 	})
-
+program.command('create <project-name> <template>')
+	.alias('c')
+	.description('init the project')
+	.action((project, template) => {
+		require('../lib/create')(project, template)
+	})
 program.parse(process.argv);
