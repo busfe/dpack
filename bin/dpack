@@ -20,5 +20,10 @@ program.command('build')
 	.action(() => {
 		require('../lib/build')(program)
 	})
-
+program.command('create <project-name> <template>')
+	.alias('c')
+	.description('init the project')
+	.action((project, template) => {
+		require('../lib/create')(project, template)
+	})
 program.parse(process.argv);
