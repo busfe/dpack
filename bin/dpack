@@ -5,21 +5,22 @@ const program = require('commander');
 program
   .usage('<command> [options]')
   .option('-v --version', 'output the version number', version)
+  .option('-w --watch', 'watch the file change')
+	.option('-p --port <n>', 'server port', parseInt)
+	.option('-o --optimize', 'optimize css or js files')
+	
 
 function version() {
 	console.log(require('../package.json').version)
 }
 
 program.command('server')
-	.option('-w --watch', 'watch the file change')
-	.option('-p --port <n>', 'server port', parseInt)
 	.description('start webpack dev server')
 	.action(() => {
 		require('../lib/server')(program)
 	})
 
 program.command('build')
-	.option('-o --optimize', 'optimize css or js files')
 	.description('build the project')
 	.action(() => {
 		require('../lib/build')(program)
