@@ -47,7 +47,6 @@
     "webpack-hot-middleware": "^2.20.0"
   },
   "devDependencies": {
-    "opn": "^5.1.0",
-    "weinre": "^2.0.0-pre-I0Z7U9OV"
+    "opn": "^5.1.0"
   }
 }
