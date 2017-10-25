@@ -1,8 +1,11 @@
 {
-  "name": "dpack-cli",
-  "version": "0.0.1",
+  "name": "@didi/dpack-cli",
+  "version": "0.0.4",
   "description": "",
   "main": "bin/dpack",
+  "bin": {
+    "dpack": "bin/dpack"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
