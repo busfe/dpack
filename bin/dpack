@@ -11,6 +11,7 @@ program
   .option('-e --env <s>', 'node env')
   .option('-c --config <path>', 'custom config path, default is dpack.config.js')
   .option('-m --md5', 'build bundle with hash')
+  .option('-d --dest <path>', 'output path')
 
 function version() {
 	console.log(require('../package.json').version)
