@@ -1,6 +1,6 @@
 {
   "name": "@didi/dpack-cli",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "main": "bin/dpack",
   "bin": {
