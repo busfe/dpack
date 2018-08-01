@@ -1,7 +1,7 @@
 {
-  "name": "@didi/dpack-cli",
+  "name": "dpack-cli",
   "version": "0.0.15",
-  "description": "",
+  "description": "基于webpack的脚手架",
   "main": "bin/dpack",
   "bin": {
     "dpack": "bin/dpack"
